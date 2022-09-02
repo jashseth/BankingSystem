@@ -1,0 +1,136 @@
+.accountStmtWrapper {
+  display: grid;
+  grid-template-columns: 15% 20% 30% 20% 15%;
+  grid-template-areas:
+  " header header header header header "
+    "side content content content content";
+    padding: 0px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: #bcb8b1;
+}
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.main-head {
+  grid-area: header;
+  background-color: dodgerblue;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  height: 80px;
+  text-align: center;
+  font-size: 3em;
+  line-height: 80px;
+  border: 2px solid black;
+  color: white;
+}
+
+.content {
+  grid-area: content;
+  margin: 5px;
+  height: 30rem;
+  overflow: scroll;
+}
+
+.content header {
+  padding: 5px;
+  font-size: 20px;
+  background-color: gainsboro;
+  margin-bottom: 10px;
+}
+
+.content .date {
+  margin: 5px;
+  margin-top: 15px;
+  margin-right: 15px;
+  height: 3rem;
+  display: block;
+  float: right;
+  padding: 5px;
+}
+
+.content .date label {
+  font-size: 25px;
+  margin: 10px;
+}
+
+.content .date input {
+  font-size: 20px;
+}
+
+.content .accountGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  border: 2px solid black;
+  margin-top: 15%;
+}
+
+.content .accountGrid > div {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.content .submitbutton button {
+  height: 40px;
+  width: 100px;
+  border: 1px solid black;
+  margin-top: 4%;
+  margin-left: 40%;
+}
+
+.side {
+  grid-area: side;
+  margin-top: 5px;
+  background-color: gainsboro;
+  border: 1px solid black;
+  height: 526px;
+}
+
+.side ul li a {
+  display: block;
+  text-decoration: none;
+  background-color: gainsboro;
+  padding: 10px 15px;
+  align-items: center;
+  text-transform: uppercase;
+  color: black;
+}
+
+.side ul li a:hover {
+  color: darkgreen;
+}
+
+.side ul {
+  background-color: #8a817c;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#image1{
+  background-color: gainsboro;
+}
+#profile:hover{
+  color: #8a817c;
+}
+
+#image{
+  width: 80%;
+  background-color: gainsboro;
+  display: flex;
+
+}

@@ -1,0 +1,32 @@
+<h2>Verification Requests</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th style="background-color: #e0afa0; align-content: center;">Customer Id</th>
+        <th style="background-color: #e0afa0">Customer Name</th>
+        <th style="background-color: #e0afa0">Mobile Number</th>
+        <th style="background-color: #e0afa0">Aadhar Number</th>
+        <th style="background-color: #e0afa0">PanCard ID</th>
+        <th style="background-color: #e0afa0">Accept</th>
+        <th style="background-color: #e0afa0">Reject</th>
+    </tr>
+</thead>
+<tbody>
+    <tr  *ngFor="let e of clist">
+        <td style="text-align: center;">{{e.customerId}}</td>
+        <td style="text-align: center;">{{e.firstName}} {{e.lastName}}</td>
+        <td style="text-align: center;">{{e.mobileNumber}}</td>
+        <td style="text-align: center;">{{e.aadharNumber}}</td>
+        <td style="text-align: center;">{{e.pancardNumber}}</td>
+        <td><button class="btn btn-warning" (click)="approveCust(e)" style="margin-left: 20px; background-color: greenyellow;"> Approve</button></td>
+        <td><button class="btn btn-warning" (click)="deleteCust(e)" style="margin-left: 20px; background-color: red; "> Reject</button></td>
+    </tr>
+</tbody>
+    
+    </table>
+    <!--<tr *ngFor="let e of clist">
+        <td>{{e.customerId}}</td>
+        <td>{{e.firstName}} {{e.lastName}}</td>
+        <td><button class="btn btn-warning" (click)="approveCust(e)" style="margin-left: 20px; "> Approve</button></td>
+        <td><button class="btn btn-warning" (click)="deleteCust(e)" style="margin-left: 20px;"> Reject</button></td>
+        </tr>-->

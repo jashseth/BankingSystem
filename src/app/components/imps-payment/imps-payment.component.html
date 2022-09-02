@@ -1,0 +1,100 @@
+<app-nav-bar></app-nav-bar>
+<div class="wrapper">
+  <div class="header">Inititate IMPS Payment</div>
+  <div class="body">
+    <div class="form" [hidden]="rtgsForm">
+      <form action="POST" (ngSubmit)="onSubmit()">
+        <div>
+          <label for="fromAccount">From Account</label>
+          <p>-</p>
+          <input
+            type="text"
+            id="rtgsFromAccount"
+            [(ngModel)]="accountId"
+            [ngModelOptions]="{ standalone: true }"
+            required
+          />
+        </div>
+        <div class="account">
+          <label for="bname">To Account</label>
+          <p>-</p>
+          <select
+            name="rtgs"
+            id="rtgsToAccount"
+            [(ngModel)]="beneficiaryId"
+            required
+          >
+            <option value="default"></option>
+            <option
+              style="text-align: left; width: 40%; height: 30px"
+              *ngFor="let beneficiary of beneficiaryDetails"
+              value="{{ beneficiary.beneficiaryId }}"
+            >
+              {{ beneficiary.beneficiaryName }}:{{
+                beneficiary.beneficiaryAccountNo
+              }}
+            </option>
+          </select>
+        </div>
+        <div>
+          <label for="bname">Amount</label>
+          <p>-</p>
+          <input
+            type="text"
+            id="rtgsAmount"
+            [(ngModel)]="transaction.amount"
+            [ngModelOptions]="{ standalone: true }"
+            required
+          />
+        </div>
+        <!--<div>
+          <label for="bname">Transaction Date</label>
+          <p>-</p>
+          <input type="date" id="rtgsTransaction" />
+        </div>-->
+        <div>
+          <label for="bname">Maturity Instructions</label>
+          <p>-</p>
+          <input type="text" id="rtgsMatInst" />
+        </div>
+        <div>
+          <label for="bname">Remark</label>
+          <p>-</p>
+          <input type="text" id="rtgsRemark" />
+        </div>
+        <div class="buttons">
+          <div class="leftbuttons">
+            <button type="submit">Save</button>
+            <button type="button" (click)="reset()">Reset</button>
+          </div>
+          <div class="rightButtons">
+            <button
+              type="button"
+              class="contBtn"
+              (click)="validateTransaction()"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="ctnBtn" [hidden]="rtgsForm">
+      <button routerLink="/addNewBeneficiary">Add New +</button>
+    </div>
+    <div [hidden]="validation">
+      <div class="tbody">
+        <form (ngSubmit)="onTransactionSubmit()">
+          <label for="tp">Enter Transaction Password</label><br /><br />
+          <input
+            type="password"
+            [(ngModel)]="validTransaction.password"
+            [ngModelOptions]="{ standalone: true }"
+          /><br /><br />
+          <button type="submit">Submit</button>
+          <button type="button" (click)="transactionRevert()">Back</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

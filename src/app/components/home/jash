@@ -1,0 +1,116 @@
+<!-- navbar starts here  -->
+<!-- <app-nav-bar-home></app-nav-bar-home> -->
+
+<!-- here content starts here -->
+<!-- <div class="container-fluid hero-content">
+  <div class="row align-items-center">
+    <div class="col-md-6 col-sm-12 text-center" data-aos="fade-up">
+      <h1 class="logo">LTI's Banking</h1>
+      <p class="lead muted">Easy way to transfer money</p>
+      <h2>Welcome</h2>
+      <br />
+      <br />
+      <a class="get-started" href="/openAccount">Get Started</a>
+    </div>
+    <div class="col-md-6 col-sm-12 text-center" data-aos="fade-left">
+      <div class="hero-img-div">
+        <img
+          class="hero-img"
+          src="./assets/images/hero-img.png"
+          alt="img-showing-money-transfer"
+        />
+      </div>
+    </div>
+
+    <br />
+  </div>
+</div>
+<br /> -->
+
+<main>
+  <!-- Everything except the footer will be inside main tag -->
+  <!-- About: Icons -->
+  <section id="about" class="icons bg-light">
+    <div class="flex-container">
+      <div>
+        <img src="./assets/img/university-solid.svg" alt="bank" height="75px" />
+        <div>
+          <h3>Net Banking</h3>
+        </div>
+      </div>
+      <div>
+        <img
+          src="./assets/img/credit-card-solid.svg"
+          alt="bank"
+          height="75px"
+        />
+        <div>
+          <h3>Go Cashless</h3>
+        </div>
+      </div>
+      <div>
+        <img
+          src="./assets/img/file-shield-solid.svg"
+          alt="bank"
+          height="75px"
+        />
+        <div>
+          <h3>Be Secure</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About: Solutions  -->
+  <section class="solutions">
+    <div class="column">
+      <div class="column-1">
+        <img src="./assets/img/home/people.jpg" alt="people" />
+      </div>
+    </div>
+    <div class="column">
+      <div class="column-2 bg-primary">
+        <h4>What are you looking for</h4>
+        <h2>We provide banking solutions</h2>
+        <p></p>
+        <!--<p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, nulla!
+          Nihil necessitatibus asperiores corrupti enim dolorum, cum unde saepe
+          voluptates voluptatibus quisquam mollitia natus ut quas dolor nam!
+          Eveniet, corporis!
+        </p>-->
+        <a href="#" class="btn-outline"> Read More </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- here content ends here -->
+
+  <!-- Footer -->
+  <footer class="footer bg-dark">
+    <div class="social">
+      <a href="#"
+        ><img
+          src="./assets/img/facebook-brands.svg"
+          alt="facebook"
+          height="35px"
+      /></a>
+      <a href="#"
+        ><img src="./assets/img/twitter-brands.svg" alt="twitter" height="35px"
+      /></a>
+      <a href="#"
+        ><img src="./assets/img/youtube-brands.svg" alt="youtube" height="35px"
+      /></a>
+      <a href="#"
+        ><img
+          src="./assets/img/linkedin-brands.svg"
+          alt="linkedin"
+          height="35px"
+      /></a>
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+      <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+  </footer>
+</main>

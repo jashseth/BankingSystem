@@ -1,0 +1,94 @@
+<script>
+  var todayDate = new Date();
+  var month = todayDate.getMonth();
+  var year = todayDate.getUTCFullYear();
+  var tdate = todayDate.getDate();
+  if (month < 9) {
+    month = "0" + month;
+  }
+  if (date < 10) {
+    tdate = "0" + tdate;
+  }
+  var maxDate = year + "-" + month + "-" + tdate;
+  console.log(maxDate);
+
+  document.getElementById("startDate").setAttribute("max", maxDate);
+</script>
+<app-nav-bar></app-nav-bar>
+<div class="accountStmtWrapper">
+  <header class="main-head">Account Statement</header>
+  <article [hidden]="beforeSubmit" class="content">
+    <div class="date">
+      <label for="from">Statement from</label>
+      <input
+        [(ngModel)]="filterTransaction.startDate"
+        type="date"
+        id="startDate"
+        max="2022-09-02"
+      />
+      <label for="to">to</label>
+      <input
+        [(ngModel)]="filterTransaction.endDate"
+        type="date"
+        max="2022-09-02"
+      />
+    </div>
+    <div class="accountGrid">
+      <div class="grid-item">Select</div>
+      <div class="grid-item">Account Number</div>
+      <div class="grid-item">Name</div>
+      <div class="grid-item">Account Type</div>
+      <div class="grid-item">Balance</div>
+      <div class="grid-item"><input type="radio" required /></div>
+      <div class="grid-item">{{ accountStatement.accountId }}</div>
+      <div class="grid-item">
+        {{ accountStatement.customer.firstName }}
+        {{ accountStatement.customer.lastName }}
+      </div>
+      <div class="grid-item">Savings</div>
+      <div class="grid-item">{{ accountStatement.balanceAmount }}</div>
+    </div>
+
+    <div class="submitbutton">
+      <button (click)="onSubmit()">Submit</button>
+    </div>
+  </article>
+  <article [hidden]="afterSubmit" class="content">
+    <table>
+      <tr>
+        <th style="background-color: #e0afa0">Transaction Number</th>
+        <th style="background-color: #e0afa0">Transation Mode</th>
+        <th style="background-color: #e0afa0">Transaction Type</th>
+        <th style="background-color: #e0afa0">Date of Transaction</th>
+        <th style="background-color: #e0afa0">Amount</th>
+      </tr>
+      <tr *ngFor="let transaction of transactions | async">
+        <td style="background-color: transparent">
+          {{ transaction.transactionId }}
+        </td>
+        <td style="background-color: transparent">
+          {{ transaction.transactionMode }}
+        </td>
+        <td style="background-color: transparent">
+          {{ transaction.transactionType }}
+        </td>
+        <td style="background-color: transparent">
+          {{ transaction.dateOfTransaction }}
+        </td>
+        <td style="background-color: transparent">
+          ₹ {{ transaction.amount }}
+        </td>
+      </tr>
+    </table>
+  </article>
+  <aside class="side">
+    <ul>
+      <li id="image1"><img id = "image" src="\assets\profileimage.png" alt="profile picture"></li>
+      <li><a routerLink="/dashboard">Home</a></li>
+      <li><a routerLink="/accountDetails">Account Details</a></li>
+      <li><a routerLink="/accountSummary">Account Summary</a></li>
+      <li><a routerLink="/impsTransfer">Fund Transfer</a></li>
+      <li><a routerLink="/accountStatement">Account Statement</a></li>
+    </ul>
+  </aside>
+</div>

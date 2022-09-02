@@ -1,0 +1,14 @@
+<body>
+  <h1>You have been logged out !</h1>
+
+  <h3>Account Number:</h3>
+  <p>{{ this.accno }}</p>
+
+  <h3>Last Login time:</h3>
+  <p>{{ this.litime.toLocaleString() }}</p>
+
+  <h3>Logout time:</h3>
+  <p>{{ this.sotime.toLocaleString() }}</p>
+
+  <button routerLink="/home">OK</button>
+</body>

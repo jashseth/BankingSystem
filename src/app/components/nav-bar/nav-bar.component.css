@@ -1,0 +1,70 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: blue;
+}
+
+
+li {
+  float: left;
+  background-color: blue
+}
+
+p {
+  display: block;;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: blue;
+}
+
+li p {
+  display: block;
+  color: greenyellow;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-left: 10px;
+  text-decoration: none;
+  background-color: blue;
+  text-decoration: inherit;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+li img {
+  margin-top: 6px;
+  margin-left: 6px;
+  background-color: blue;
+  height: 35px;
+  width: 35px;
+}
+
+
+li .signOut {
+  background-color: bisque;
+}
+
+#h1:hover{
+  color:crimson;
+}
+
+#h2:hover{
+  color:green;
+}
+
+#h3:hover{
+  color:crimson;
+}
+
+#h4:hover{
+  color:green;
+}

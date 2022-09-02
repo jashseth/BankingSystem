@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login</title>
+    <link href="admin.component.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form action="" class="form" (ngSubmit)="verifyUser()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="form-inner">
+        <h2 id="header">ADMIN</h2>
+        <div class="content">
+          <label id="accountnumber">Login Id</label>
+          <input
+            class="input"
+            type="text"
+            placeholder="UserId"
+            [(ngModel)]="adminid"
+            name="username"
+            required
+          /><br />
+          <label>Password</label>
+          <input
+            class="input"
+            type="text"
+            placeholder="Enter Password"
+            [(ngModel)]="adminpassword"
+            name="password"
+            required
+          />
+          <button class="btn" id="demo" type="submit">submit</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

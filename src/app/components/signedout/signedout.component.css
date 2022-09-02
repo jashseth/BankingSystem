@@ -1,0 +1,49 @@
+body{
+	margin: 0;
+	padding: 0;
+	
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+    background-image: url("/assets/register.jpg");
+  /*background-image: url("https://techbullion.com/wp-content/uploads/2021/11/Banking.jpeg");*/
+
+}
+
+button{
+	width: 10%;
+	height: 40px;
+	margin: 25px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #573b8a;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 25px;
+	outline: none;
+	border: none;
+	border-radius: 15px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+
+h1{
+    justify-content: center;
+	text-align: center;
+	padding-top: 7%;
+    margin: 3%;
+    color: #573b8a;
+}
+
+h3{
+    justify-content: center;
+	text-align: center;
+    margin-top: 2%;
+}
+p{
+    justify-content: center;
+	text-align: center;
+    margin: 1%;
+}

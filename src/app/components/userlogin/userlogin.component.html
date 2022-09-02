@@ -1,0 +1,40 @@
+<body [hidden]="logedin">
+	<div class="main" >  
+
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form (ngSubmit)="userRegister()" action="#">
+					<label  for="chk" aria-hidden="true" class="animated_div">Sign up</label>
+
+				<input type="text" name = "accountNumber"  type="text" id = "accountNumber"  placeholder="Enter your Account Number" required [(ngModel)] = "register.accountNumber" >
+
+
+				<input type="password" name="password" id="password"  placeholder="Enter your Password" required [(ngModel)] = "register.password">
+
+				<input type="password" placeholder="Enter Confirm Password" required>
+
+        <input type="password" name="transactionPassword" id="transactionPassword"  placeholder="Enter Transaction Password" required  [(ngModel)] = "register.transactionPassword">
+
+        <input type="password" placeholder="Enter Confirm Transaction Password" required>
+					<button class="signupbtn">Sign up</button>
+
+				</form>
+			</div>
+
+			<div class="login" >
+				<form class = "form" action="#"  (ngSubmit)="userlogin()">
+          
+					<label for="chk" aria-hidden="true">Login</label>
+
+         <h1 class ="danger"> <small class="danger" id="danger"> {{msg}} </small> </h1>
+          <input class="input" name = "accountNumber"  type="text" id = "accountNumber" placeholder="Enter your UserID" required  [(ngModel)] = "user.accountNumber" >
+					<input class="input" name="password"  type="password" id = "password" placeholder="Enter your password" required  [(ngModel)] = "user.password">
+					<button class="btn">Login</button>
+					<a class="forgotuser" href="/forgotuserid">Forgot UserId</a>
+					<a class="forgotpassword" href="/forgotpassword">Forgot Password</a><br>
+					<a class="forgotpassword" href="http://localhost:4200/login" style="padding-left:120px;">New User Register</a>
+				</form>
+			</div>
+	</div>
+</body>
